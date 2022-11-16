@@ -10,3 +10,12 @@ C:\Users\16clark-windleo\OneDrive - UTC Sheffield\Computing\Projects\Visual Stud
 C:\Users\16clark-windleo\OneDrive - UTC Sheffield\Computing\Projects\Visual Studio\Naughts and Crosses V2\Naughts and Crosses V2\Naughts and Crosses V2\obj\Debug\Naughts and Crosses V2.pdb
 C:\Users\16clark-windleo\OneDrive - UTC Sheffield\Computing\Projects\Visual Studio\Naughts and Crosses V2\Naughts and Crosses V2\Naughts and Crosses V2\obj\Debug\Naughts_and_Crosses_V2.Form1.resources
 C:\Users\16clark-windleo\OneDrive - UTC Sheffield\Computing\Projects\Visual Studio\Naughts and Crosses V2\Naughts and Crosses V2\Naughts and Crosses V2\obj\Debug\Naughts_and_Crosses_V2.Form2.resources
+C:\Users\User\Dropbox\My PC (DESKTOP-M3RNP5Q)\Documents\Naughts and Crosses V2\Naughts and Crosses V2\Naughts and Crosses V2\obj\Debug\Naughts and Crosses V2.csproj.AssemblyReference.cache
+C:\Users\User\Dropbox\My PC (DESKTOP-M3RNP5Q)\Documents\Naughts and Crosses V2\Naughts and Crosses V2\Naughts and Crosses V2\obj\Debug\Naughts and Crosses V2.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\Dropbox\My PC (DESKTOP-M3RNP5Q)\Documents\Naughts and Crosses V2\Naughts and Crosses V2\Naughts and Crosses V2\obj\Debug\Naughts_and_Crosses_V2.Form1.resources
+C:\Users\User\Dropbox\My PC (DESKTOP-M3RNP5Q)\Documents\Naughts and Crosses V2\Naughts and Crosses V2\Naughts and Crosses V2\obj\Debug\Naughts_and_Crosses_V2.Form2.resources
+C:\Users\User\Dropbox\My PC (DESKTOP-M3RNP5Q)\Documents\Naughts and Crosses V2\Naughts and Crosses V2\Naughts and Crosses V2\obj\Debug\Naughts_and_Crosses_V2.Properties.Resources.resources
+C:\Users\User\Dropbox\My PC (DESKTOP-M3RNP5Q)\Documents\Naughts and Crosses V2\Naughts and Crosses V2\Naughts and Crosses V2\obj\Debug\Naughts and Crosses V2.csproj.GenerateResource.cache
+C:\Users\User\Dropbox\My PC (DESKTOP-M3RNP5Q)\Documents\Naughts and Crosses V2\Naughts and Crosses V2\Naughts and Crosses V2\obj\Debug\Naughts and Crosses V2.csproj.CoreCompileInputs.cache
+C:\Users\User\Dropbox\My PC (DESKTOP-M3RNP5Q)\Documents\Naughts and Crosses V2\Naughts and Crosses V2\Naughts and Crosses V2\obj\Debug\Naughts and Crosses V2.exe
+C:\Users\User\Dropbox\My PC (DESKTOP-M3RNP5Q)\Documents\Naughts and Crosses V2\Naughts and Crosses V2\Naughts and Crosses V2\obj\Debug\Naughts and Crosses V2.pdb

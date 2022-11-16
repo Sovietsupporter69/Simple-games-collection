@@ -39,7 +39,9 @@ namespace Naughts_and_Crosses_V2
 
         void Place(int Column) {
             for (int i = 0; i < 6; i++) {
-                if ("R"+i+"C"+Column.Text == "") {
+                string s = "R" + i + "C" + Column;
+                TextBox TextboxName = s;
+                if (TextboxName.Text == "") {
 
                 }
             }

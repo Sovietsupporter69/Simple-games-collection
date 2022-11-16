@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "3a1d3071-fb87-4274-a65e-3d7a19e18738": {
+      "ProjectGuid": "3a1d3071-fb87-4274-a65e-3d7a19e18738",
+      "DisplayName": "Naughts and Crosses V2",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
