@@ -1,0 +1,12 @@
+C:\Users\16clark-windleo\OneDrive - UTC Sheffield\Computing\Projects\Visual Studio\Naughts and Crosses V2\Naughts and Crosses V2\Naughts and Crosses V2\bin\Debug\Naughts and Crosses V2.exe.config
+C:\Users\16clark-windleo\OneDrive - UTC Sheffield\Computing\Projects\Visual Studio\Naughts and Crosses V2\Naughts and Crosses V2\Naughts and Crosses V2\bin\Debug\Naughts and Crosses V2.exe
+C:\Users\16clark-windleo\OneDrive - UTC Sheffield\Computing\Projects\Visual Studio\Naughts and Crosses V2\Naughts and Crosses V2\Naughts and Crosses V2\bin\Debug\Naughts and Crosses V2.pdb
+C:\Users\16clark-windleo\OneDrive - UTC Sheffield\Computing\Projects\Visual Studio\Naughts and Crosses V2\Naughts and Crosses V2\Naughts and Crosses V2\obj\Debug\Naughts and Crosses V2.csproj.AssemblyReference.cache
+C:\Users\16clark-windleo\OneDrive - UTC Sheffield\Computing\Projects\Visual Studio\Naughts and Crosses V2\Naughts and Crosses V2\Naughts and Crosses V2\obj\Debug\Naughts and Crosses V2.csproj.SuggestedBindingRedirects.cache
+C:\Users\16clark-windleo\OneDrive - UTC Sheffield\Computing\Projects\Visual Studio\Naughts and Crosses V2\Naughts and Crosses V2\Naughts and Crosses V2\obj\Debug\Naughts_and_Crosses_V2.Properties.Resources.resources
+C:\Users\16clark-windleo\OneDrive - UTC Sheffield\Computing\Projects\Visual Studio\Naughts and Crosses V2\Naughts and Crosses V2\Naughts and Crosses V2\obj\Debug\Naughts and Crosses V2.csproj.GenerateResource.cache
+C:\Users\16clark-windleo\OneDrive - UTC Sheffield\Computing\Projects\Visual Studio\Naughts and Crosses V2\Naughts and Crosses V2\Naughts and Crosses V2\obj\Debug\Naughts and Crosses V2.csproj.CoreCompileInputs.cache
+C:\Users\16clark-windleo\OneDrive - UTC Sheffield\Computing\Projects\Visual Studio\Naughts and Crosses V2\Naughts and Crosses V2\Naughts and Crosses V2\obj\Debug\Naughts and Crosses V2.exe
+C:\Users\16clark-windleo\OneDrive - UTC Sheffield\Computing\Projects\Visual Studio\Naughts and Crosses V2\Naughts and Crosses V2\Naughts and Crosses V2\obj\Debug\Naughts and Crosses V2.pdb
+C:\Users\16clark-windleo\OneDrive - UTC Sheffield\Computing\Projects\Visual Studio\Naughts and Crosses V2\Naughts and Crosses V2\Naughts and Crosses V2\obj\Debug\Naughts_and_Crosses_V2.Form1.resources
+C:\Users\16clark-windleo\OneDrive - UTC Sheffield\Computing\Projects\Visual Studio\Naughts and Crosses V2\Naughts and Crosses V2\Naughts and Crosses V2\obj\Debug\Naughts_and_Crosses_V2.Form2.resources
