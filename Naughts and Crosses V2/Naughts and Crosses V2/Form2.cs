@@ -38,11 +38,26 @@ namespace Naughts_and_Crosses_V2
         private void D6_Click(object sender, EventArgs e) { Place(6); }
 
         void Place(int Column) {
+            int Turn = 0; Turn++; string TurnC;
+            if (Turn%2 == 1) { TurnC = "X";}
+            else if (Turn % 1 == 0) { TurnC = "O"; }
+
             for (int i = 0; i < 6; i++) {
                 string s = "R" + i + "C" + Column;
-                TextBox TextboxName = s;
-                if (TextboxName.Text == "") {
-
+                var Controls = this.Controls.Find(s, true);
+                if ((Controls[0] as TextBox).Text == "")
+                {
+                    int Coni = i+1;
+                    string Cons = "R" + Coni + "C" + Column;
+                    var ConControls = this.Controls.Find(Cons, true);
+                    (Controls[0] as TextBox).Text = TurnC;
+                    break;
+                }
+                else if (i == 0)
+                {
+                    string Cons = "R" + i + "C" + Column;
+                    var ConControls = this.Controls.Find(Cons, true);
+                    (Controls[0] as TextBox).Text = TurnC;
                 }
             }
         }

@@ -19,3 +19,6 @@ C:\Users\User\Dropbox\My PC (DESKTOP-M3RNP5Q)\Documents\Naughts and Crosses V2\N
 C:\Users\User\Dropbox\My PC (DESKTOP-M3RNP5Q)\Documents\Naughts and Crosses V2\Naughts and Crosses V2\Naughts and Crosses V2\obj\Debug\Naughts and Crosses V2.csproj.CoreCompileInputs.cache
 C:\Users\User\Dropbox\My PC (DESKTOP-M3RNP5Q)\Documents\Naughts and Crosses V2\Naughts and Crosses V2\Naughts and Crosses V2\obj\Debug\Naughts and Crosses V2.exe
 C:\Users\User\Dropbox\My PC (DESKTOP-M3RNP5Q)\Documents\Naughts and Crosses V2\Naughts and Crosses V2\Naughts and Crosses V2\obj\Debug\Naughts and Crosses V2.pdb
+C:\Users\User\Dropbox\My PC (DESKTOP-M3RNP5Q)\Documents\Naughts and Crosses V2\Naughts and Crosses V2\Naughts and Crosses V2\bin\Debug\Naughts and Crosses V2.exe.config
+C:\Users\User\Dropbox\My PC (DESKTOP-M3RNP5Q)\Documents\Naughts and Crosses V2\Naughts and Crosses V2\Naughts and Crosses V2\bin\Debug\Naughts and Crosses V2.exe
+C:\Users\User\Dropbox\My PC (DESKTOP-M3RNP5Q)\Documents\Naughts and Crosses V2\Naughts and Crosses V2\Naughts and Crosses V2\bin\Debug\Naughts and Crosses V2.pdb
