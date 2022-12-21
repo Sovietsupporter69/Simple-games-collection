@@ -10,15 +10,18 @@ using System.Windows.Forms;
 
 namespace Naughts_and_Crosses_V2
 {
-    public partial class Form2 : Form
+    public partial class FourInARow : Form
     {
         string TurnC;
         int Turn = 0;
         bool Win;
         string WinChar;
-        public Form2()
+        Menu HomeFrm;
+
+        public FourInARow(Menu Menu)
         {
             InitializeComponent();
+            HomeFrm = Menu;
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -29,8 +32,7 @@ namespace Naughts_and_Crosses_V2
         private void fourinarow_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form1 form1 = new Form1();
-            form1.Show();
+            HomeFrm.Show();
         }
 
         private void D0_Click(object sender, EventArgs e) { Place(0); }
@@ -43,7 +45,7 @@ namespace Naughts_and_Crosses_V2
 
         void Place(int Column) {
             bool Placed = false;
-            noughtsandcrosses.Visible = false;
+            Home.Visible = false;
 
             if (!Win)
             {
@@ -125,7 +127,7 @@ namespace Naughts_and_Crosses_V2
             WinChar = "";
             Turn = 0;
             Reset.Visible = false;
-            noughtsandcrosses.Visible = true;
+            Home.Visible = true;
             Output.Text = "";
         }
     }

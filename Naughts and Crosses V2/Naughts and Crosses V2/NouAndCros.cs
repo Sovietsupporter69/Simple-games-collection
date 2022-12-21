@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Naughts_and_Crosses_V2
 {
-    public partial class Form1 : Form
+    public partial class NouAndCros : Form
     {
         int turn = 1;
         string text = "X"; char arr = 'X';
@@ -18,10 +18,23 @@ namespace Naughts_and_Crosses_V2
         char Win = '-';
         Random rnd = new Random();
         char[,] A = new char[3,3] { { '-', '-', '-' }, { '-', '-', '-' }, { '-', '-', '-' } };
+        Menu HomeFrm;
 
-        public Form1()
+        public NouAndCros(Menu Menu)
         {
             InitializeComponent();
+            HomeFrm = Menu;
+        }
+
+        private void NouAndCros_Load(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void fourinarow_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            HomeFrm.Show();
         }
 
         private void TL_Click(object sender, EventArgs e){ ButtonChange(TL, 0, 0); }
@@ -36,7 +49,7 @@ namespace Naughts_and_Crosses_V2
 
         void ButtonChange(Button button, int X, int Y)
         {
-            fourinarow.Visible = false;
+            Home.Visible = false;
             if (WinBool == false && button.Text == "")
             {
                 if (turn % 2 == 1) { text = "X"; arr = 'X'; }
@@ -75,14 +88,7 @@ namespace Naughts_and_Crosses_V2
             BL.Text = ""; BM.Text = ""; BR.Text = "";
             Output.Text = "";
             Reset.Visible = false;
-            fourinarow.Visible = true;
-        }
-
-        private void fourinarow_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Form2 form2 = new Form2();
-            form2.Show();
+            Home.Visible = true;
         }
     }
 }
