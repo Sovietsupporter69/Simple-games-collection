@@ -146,7 +146,7 @@
             // Reset
             // 
             this.Reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.Reset.Location = new System.Drawing.Point(141, 12);
+            this.Reset.Location = new System.Drawing.Point(283, 10);
             this.Reset.Name = "Reset";
             this.Reset.Size = new System.Drawing.Size(89, 33);
             this.Reset.TabIndex = 11;

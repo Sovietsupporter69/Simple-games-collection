@@ -12,6 +12,10 @@ namespace Naughts_and_Crosses_V2
 {
     public partial class Form2 : Form
     {
+        string TurnC;
+        int Turn = 0;
+        bool Win;
+        string WinChar;
         public Form2()
         {
             InitializeComponent();
@@ -38,28 +42,91 @@ namespace Naughts_and_Crosses_V2
         private void D6_Click(object sender, EventArgs e) { Place(6); }
 
         void Place(int Column) {
-            int Turn = 0; Turn++; string TurnC;
-            if (Turn%2 == 1) { TurnC = "X";}
-            else if (Turn % 1 == 0) { TurnC = "O"; }
+            bool Placed = false;
+            noughtsandcrosses.Visible = false;
 
-            for (int i = 0; i < 6; i++) {
-                string s = "R" + i + "C" + Column;
-                var Controls = this.Controls.Find(s, true);
-                if ((Controls[0] as TextBox).Text == "")
+            if (!Win)
+            {
+                Turn++;
+                if (Turn % 2 == 1) { TurnC = "X"; }
+                else if (Turn % 1 == 0) { TurnC = "O"; }
+
+                for (int i = 0; i < 6; i++)
                 {
-                    int Coni = i+1;
-                    string Cons = "R" + Coni + "C" + Column;
-                    var ConControls = this.Controls.Find(Cons, true);
-                    (Controls[0] as TextBox).Text = TurnC;
-                    break;
-                }
-                else if (i == 0)
-                {
-                    string Cons = "R" + i + "C" + Column;
-                    var ConControls = this.Controls.Find(Cons, true);
-                    (Controls[0] as TextBox).Text = TurnC;
+                    string s = "R" + i + "C" + Column;
+                    var Controls = this.Controls.Find(s, true);
+                    if ((Controls[0] as TextBox).Text == "")
+                    {
+                        Placed = true;
+                        int Coni = i + 1;
+                        string Cons = "R" + Coni + "C" + Column;
+                        var ConControls = this.Controls.Find(Cons, true);
+                        (Controls[0] as TextBox).Text = TurnC;
+                        break;
+                    }
                 }
             }
+            if (!Placed) { Turn--; }
+
+            WinCheck();
+        }
+
+        void WinCheck()
+        {
+            Win = false;
+            for (int y = 0; y <= 2; y++){
+                for (int x = 0; x <= 6; x++) {
+                    if ((this.Controls.Find("R" + y + "C" + x, true)[0] as TextBox).Text == (this.Controls.Find("R" + (y + 1) + "C" + x, true)[0] as TextBox).Text && (this.Controls.Find("R" + (y + 1) + "C" + x, true)[0] as TextBox).Text == (this.Controls.Find("R" + (y + 2) + "C" + x, true)[0] as TextBox).Text && (this.Controls.Find("R" + (y + 2) + "C" + x, true)[0] as TextBox).Text == (this.Controls.Find("R" + (y + 3) + "C" + x, true)[0] as TextBox).Text && (this.Controls.Find("R" + y + "C" + x, true)[0] as TextBox).Text != "")
+                    {
+                        WinChar = (this.Controls.Find("R" + y + "C" + x, true)[0] as TextBox).Text;
+                        Win = true; //Vertical win checks
+                    }
+                }
+            }
+            for (int y = 0; y <= 5; y++){
+                for (int x = 0; x <= 3; x++){
+                    if ((this.Controls.Find("R" + y + "C" + x, true)[0] as TextBox).Text == (this.Controls.Find("R" + y + "C" + (x + 1), true)[0] as TextBox).Text && (this.Controls.Find("R" + y + "C" + (x + 1), true)[0] as TextBox).Text == (this.Controls.Find("R" + y + "C" + (x + 2), true)[0] as TextBox).Text && (this.Controls.Find("R" + y + "C" + (x + 2), true)[0] as TextBox).Text == (this.Controls.Find("R" + y + "C" + (x + 3), true)[0] as TextBox).Text && (this.Controls.Find("R" + y + "C" + x, true)[0] as TextBox).Text != "")
+                    {
+                        WinChar = (this.Controls.Find("R" + y + "C" + x, true)[0] as TextBox).Text;
+                        Win = true; //horisontal win checks
+                    }
+                }
+            }
+            for (int y = 0; y <= 2; y++){
+                for (int x = 0; x <= 3; x++){
+                    if ((this.Controls.Find("R" + y + "C" + x, true)[0] as TextBox).Text == (this.Controls.Find("R" + (y + 1) + "C" + (x + 1), true)[0] as TextBox).Text && (this.Controls.Find("R" + (y + 1) + "C" + (x + 1), true)[0] as TextBox).Text == (this.Controls.Find("R" + (y + 2) + "C" + (x + 2), true)[0] as TextBox).Text && (this.Controls.Find("R" + (y + 2) + "C" + (x + 2), true)[0] as TextBox).Text == (this.Controls.Find("R" + (y + 3) + "C" + (x + 3), true)[0] as TextBox).Text && (this.Controls.Find("R" + y + "C" + x, true)[0] as TextBox).Text != "")
+                    {
+                        WinChar = (this.Controls.Find("R" + y + "C" + x, true)[0] as TextBox).Text;
+                        Win = true; // Top-Right diagonal win checks
+                    }
+                }
+            }
+            for (int y = 0; y <= 2; y++){
+                for (int x = 0; x <= 3; x++){
+                    if ((this.Controls.Find("R" + (y + 3) + "C" + x, true)[0] as TextBox).Text == (this.Controls.Find("R" + (y + 2) + "C" + (x + 1), true)[0] as TextBox).Text && (this.Controls.Find("R" + (y + 2) + "C" + (x + 1), true)[0] as TextBox).Text == (this.Controls.Find("R" + (y + 1) + "C" + (x + 2), true)[0] as TextBox).Text && (this.Controls.Find("R" + (y + 1) + "C" + (x + 2), true)[0] as TextBox).Text == (this.Controls.Find("R" + y + "C" + (x + 3), true)[0] as TextBox).Text && (this.Controls.Find("R" + (y + 3) + "C" + x, true)[0] as TextBox).Text != "")
+                    {
+                        WinChar = (this.Controls.Find("R" + (y + 3) + "C" + x, true)[0] as TextBox).Text;
+                        Win = true; // Top-Left diagonal win checks
+                    }
+                }
+            }
+
+            if (Win) { Output.Text = WinChar + " wins!"; Reset.Visible = true; }
+        }
+
+        private void Reset_Click(object sender, EventArgs e)
+        {
+            for (int y = 0; y <= 5; y++){
+                for (int x = 0; x <= 6; x++){
+                    (this.Controls.Find("R" + y + "C" + x, true)[0] as TextBox).Text = "";
+                }
+            }
+            Win = false;
+            WinChar = "";
+            Turn = 0;
+            Reset.Visible = false;
+            noughtsandcrosses.Visible = true;
+            Output.Text = "";
         }
     }
 }

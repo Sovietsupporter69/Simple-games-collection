@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.fourinarow = new System.Windows.Forms.Button();
+            this.noughtsandcrosses = new System.Windows.Forms.Button();
             this.R5C1 = new System.Windows.Forms.TextBox();
             this.D0 = new System.Windows.Forms.Button();
             this.D1 = new System.Windows.Forms.Button();
@@ -78,19 +78,21 @@
             this.R0C2 = new System.Windows.Forms.TextBox();
             this.R2C2 = new System.Windows.Forms.TextBox();
             this.R1C2 = new System.Windows.Forms.TextBox();
+            this.Reset = new System.Windows.Forms.Button();
+            this.Output = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // fourinarow
+            // noughtsandcrosses
             // 
-            this.fourinarow.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.fourinarow.Location = new System.Drawing.Point(12, 12);
-            this.fourinarow.Name = "fourinarow";
-            this.fourinarow.Size = new System.Drawing.Size(181, 33);
-            this.fourinarow.TabIndex = 13;
-            this.fourinarow.Text = "Noughts and crosses";
-            this.fourinarow.UseMnemonic = false;
-            this.fourinarow.UseVisualStyleBackColor = true;
-            this.fourinarow.Click += new System.EventHandler(this.fourinarow_Click);
+            this.noughtsandcrosses.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.noughtsandcrosses.Location = new System.Drawing.Point(12, 12);
+            this.noughtsandcrosses.Name = "noughtsandcrosses";
+            this.noughtsandcrosses.Size = new System.Drawing.Size(181, 33);
+            this.noughtsandcrosses.TabIndex = 13;
+            this.noughtsandcrosses.Text = "Noughts and crosses";
+            this.noughtsandcrosses.UseMnemonic = false;
+            this.noughtsandcrosses.UseVisualStyleBackColor = true;
+            this.noughtsandcrosses.Click += new System.EventHandler(this.fourinarow_Click);
             // 
             // R5C1
             // 
@@ -673,11 +675,36 @@
             this.R1C2.TabIndex = 25;
             this.R1C2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // Reset
+            // 
+            this.Reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.Reset.Location = new System.Drawing.Point(699, 10);
+            this.Reset.Name = "Reset";
+            this.Reset.Size = new System.Drawing.Size(89, 33);
+            this.Reset.TabIndex = 27;
+            this.Reset.Text = "Reset";
+            this.Reset.UseVisualStyleBackColor = true;
+            this.Reset.Visible = false;
+            this.Reset.Click += new System.EventHandler(this.Reset_Click);
+            // 
+            // Output
+            // 
+            this.Output.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.Output.Location = new System.Drawing.Point(285, 408);
+            this.Output.MaxLength = 52642;
+            this.Output.Name = "Output";
+            this.Output.ReadOnly = true;
+            this.Output.Size = new System.Drawing.Size(215, 30);
+            this.Output.TabIndex = 28;
+            this.Output.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Output);
+            this.Controls.Add(this.Reset);
             this.Controls.Add(this.R0C6);
             this.Controls.Add(this.R0C3);
             this.Controls.Add(this.R0C4);
@@ -727,7 +754,7 @@
             this.Controls.Add(this.R5C5);
             this.Controls.Add(this.R5C0);
             this.Controls.Add(this.R5C1);
-            this.Controls.Add(this.fourinarow);
+            this.Controls.Add(this.noughtsandcrosses);
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -738,7 +765,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button fourinarow;
+        private System.Windows.Forms.Button noughtsandcrosses;
         private System.Windows.Forms.TextBox R5C1;
         private System.Windows.Forms.Button D0;
         private System.Windows.Forms.Button D1;
@@ -788,5 +815,7 @@
         private System.Windows.Forms.TextBox R0C2;
         private System.Windows.Forms.TextBox R2C2;
         private System.Windows.Forms.TextBox R1C2;
+        private System.Windows.Forms.Button Reset;
+        private System.Windows.Forms.TextBox Output;
     }
 }
