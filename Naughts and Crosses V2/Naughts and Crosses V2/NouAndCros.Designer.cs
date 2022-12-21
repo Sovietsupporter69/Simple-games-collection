@@ -1,6 +1,6 @@
 ﻿namespace Naughts_and_Crosses_V2
 {
-    partial class Form1
+    partial class NouAndCros
     {
         /// <summary>
         /// Required designer variable.
@@ -39,7 +39,7 @@
             this.BR = new System.Windows.Forms.Button();
             this.Output = new System.Windows.Forms.TextBox();
             this.Reset = new System.Windows.Forms.Button();
-            this.fourinarow = new System.Windows.Forms.Button();
+            this.Home = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // MM
@@ -155,23 +155,23 @@
             this.Reset.Visible = false;
             this.Reset.Click += new System.EventHandler(this.Reset_Click);
             // 
-            // fourinarow
+            // Home
             // 
-            this.fourinarow.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.fourinarow.Location = new System.Drawing.Point(12, 12);
-            this.fourinarow.Name = "fourinarow";
-            this.fourinarow.Size = new System.Drawing.Size(89, 33);
-            this.fourinarow.TabIndex = 12;
-            this.fourinarow.Text = "4 in a row";
-            this.fourinarow.UseVisualStyleBackColor = true;
-            this.fourinarow.Click += new System.EventHandler(this.fourinarow_Click);
+            this.Home.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Home.Location = new System.Drawing.Point(12, 12);
+            this.Home.Name = "Home";
+            this.Home.Size = new System.Drawing.Size(62, 33);
+            this.Home.TabIndex = 12;
+            this.Home.Text = "Home";
+            this.Home.UseVisualStyleBackColor = true;
+            this.Home.Click += new System.EventHandler(this.fourinarow_Click);
             // 
-            // Form1
+            // NouAndCros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 361);
-            this.Controls.Add(this.fourinarow);
+            this.Controls.Add(this.Home);
             this.Controls.Add(this.Reset);
             this.Controls.Add(this.Output);
             this.Controls.Add(this.BR);
@@ -184,8 +184,9 @@
             this.Controls.Add(this.TL);
             this.Controls.Add(this.MM);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "Form1";
+            this.Name = "NouAndCros";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.NouAndCros_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,7 +205,7 @@
         private System.Windows.Forms.Button BR;
         private System.Windows.Forms.TextBox Output;
         private System.Windows.Forms.Button Reset;
-        private System.Windows.Forms.Button fourinarow;
+        private System.Windows.Forms.Button Home;
     }
 }
 

@@ -1,6 +1,6 @@
 ﻿namespace Naughts_and_Crosses_V2
 {
-    partial class Form2
+    partial class FourInARow
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.noughtsandcrosses = new System.Windows.Forms.Button();
+            this.Home = new System.Windows.Forms.Button();
             this.R5C1 = new System.Windows.Forms.TextBox();
             this.D0 = new System.Windows.Forms.Button();
             this.D1 = new System.Windows.Forms.Button();
@@ -82,17 +82,17 @@
             this.Output = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // noughtsandcrosses
+            // Home
             // 
-            this.noughtsandcrosses.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.noughtsandcrosses.Location = new System.Drawing.Point(12, 12);
-            this.noughtsandcrosses.Name = "noughtsandcrosses";
-            this.noughtsandcrosses.Size = new System.Drawing.Size(181, 33);
-            this.noughtsandcrosses.TabIndex = 13;
-            this.noughtsandcrosses.Text = "Noughts and crosses";
-            this.noughtsandcrosses.UseMnemonic = false;
-            this.noughtsandcrosses.UseVisualStyleBackColor = true;
-            this.noughtsandcrosses.Click += new System.EventHandler(this.fourinarow_Click);
+            this.Home.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Home.Location = new System.Drawing.Point(12, 12);
+            this.Home.Name = "Home";
+            this.Home.Size = new System.Drawing.Size(61, 33);
+            this.Home.TabIndex = 13;
+            this.Home.Text = "Home";
+            this.Home.UseMnemonic = false;
+            this.Home.UseVisualStyleBackColor = true;
+            this.Home.Click += new System.EventHandler(this.fourinarow_Click);
             // 
             // R5C1
             // 
@@ -754,7 +754,7 @@
             this.Controls.Add(this.R5C5);
             this.Controls.Add(this.R5C0);
             this.Controls.Add(this.R5C1);
-            this.Controls.Add(this.noughtsandcrosses);
+            this.Controls.Add(this.Home);
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -765,7 +765,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button noughtsandcrosses;
+        private System.Windows.Forms.Button Home;
         private System.Windows.Forms.TextBox R5C1;
         private System.Windows.Forms.Button D0;
         private System.Windows.Forms.Button D1;
