@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Minesweeper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Minesweeper.Designer.cs">
+      <DependentUpon>Minesweeper.cs</DependentUpon>
+    </Compile>
     <Compile Include="NouAndCros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Minesweeper.resx">
+      <DependentUpon>Minesweeper.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NouAndCros.resx">
       <DependentUpon>NouAndCros.cs</DependentUpon>
     </EmbeddedResource>

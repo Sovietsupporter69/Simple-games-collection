@@ -32,6 +32,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Noughtsandcrosses = new System.Windows.Forms.Button();
             this.fourinarow = new System.Windows.Forms.Button();
+            this.minesweeper = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -69,7 +70,7 @@
             // fourinarow
             // 
             this.fourinarow.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.fourinarow.Location = new System.Drawing.Point(150, 114);
+            this.fourinarow.Location = new System.Drawing.Point(150, 115);
             this.fourinarow.Name = "fourinarow";
             this.fourinarow.Size = new System.Drawing.Size(87, 33);
             this.fourinarow.TabIndex = 15;
@@ -78,11 +79,24 @@
             this.fourinarow.UseVisualStyleBackColor = true;
             this.fourinarow.Click += new System.EventHandler(this.fourinarow_Click);
             // 
+            // minesweeper
+            // 
+            this.minesweeper.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.minesweeper.Location = new System.Drawing.Point(126, 155);
+            this.minesweeper.Name = "minesweeper";
+            this.minesweeper.Size = new System.Drawing.Size(134, 33);
+            this.minesweeper.TabIndex = 16;
+            this.minesweeper.Text = "Minesweeper";
+            this.minesweeper.UseMnemonic = false;
+            this.minesweeper.UseVisualStyleBackColor = true;
+            this.minesweeper.Click += new System.EventHandler(this.minesweeper_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(376, 450);
+            this.Controls.Add(this.minesweeper);
             this.Controls.Add(this.fourinarow);
             this.Controls.Add(this.Noughtsandcrosses);
             this.Controls.Add(this.label2);
@@ -100,5 +114,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button Noughtsandcrosses;
         private System.Windows.Forms.Button fourinarow;
+        private System.Windows.Forms.Button minesweeper;
     }
 }
