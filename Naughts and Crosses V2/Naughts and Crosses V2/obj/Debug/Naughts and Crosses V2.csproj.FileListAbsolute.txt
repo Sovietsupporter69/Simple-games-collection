@@ -23,3 +23,4 @@ C:\Users\User\Dropbox\My PC (DESKTOP-M3RNP5Q)\Documents\Naughts and Crosses V2\N
 C:\Users\User\Dropbox\My PC (DESKTOP-M3RNP5Q)\Documents\Naughts and Crosses V2\Naughts and Crosses V2\Naughts and Crosses V2\obj\Debug\Naughts_and_Crosses_V2.NouAndCros.resources
 C:\Users\User\Dropbox\My PC (DESKTOP-M3RNP5Q)\Documents\Naughts and Crosses V2\Naughts and Crosses V2\Naughts and Crosses V2\obj\Debug\Naughts_and_Crosses_V2.Menu.resources
 C:\Users\User\Dropbox\My PC (DESKTOP-M3RNP5Q)\Documents\Naughts and Crosses V2\Naughts and Crosses V2\Naughts and Crosses V2\obj\Debug\Naughts_and_Crosses_V2.FourInARow.resources
+C:\Users\User\Dropbox\My PC (DESKTOP-M3RNP5Q)\Documents\Naughts and Crosses V2\Naughts and Crosses V2\Naughts and Crosses V2\obj\Debug\Naughts_and_Crosses_V2.Minesweeper.resources

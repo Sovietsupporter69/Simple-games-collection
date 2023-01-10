@@ -14,11 +14,13 @@ namespace Naughts_and_Crosses_V2
     {
         NouAndCros NaC;
         FourInARow fiar;
+        Minesweeper Mine;
         public Menu()
         {
             InitializeComponent();
             fiar = new FourInARow(this);
             NaC = new NouAndCros(this);
+            Mine = new Minesweeper(this);
         }
 
         private void Noughtsandcrosses_Click(object sender, EventArgs e)
@@ -31,6 +33,12 @@ namespace Naughts_and_Crosses_V2
         {
             this.Hide();
             fiar.Show();
+        }
+
+        private void minesweeper_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Mine.Show();
         }
     }
 }
