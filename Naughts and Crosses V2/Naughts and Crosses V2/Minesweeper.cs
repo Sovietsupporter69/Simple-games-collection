@@ -15,8 +15,8 @@ namespace Naughts_and_Crosses_V2
         Menu HomeFrm;
         bool CheckChange = true;
         int MineNum = 0;
-        int BoardWidth; int BoxWidth;
-        int BoardHeight; int BoxHeight;
+        int BoardWidth;
+        int BoardHeight;
         int BoxScale = 24;
         bool NewGame = true;
         Object[,,] Board;
@@ -62,50 +62,51 @@ namespace Naughts_and_Crosses_V2
         {
             if (NewGame == true)
             {
-                if (CountBox.Checked) { BoardWidth = 31; BoardHeight = 31; }
+                if (CountBox.Checked) { BoardWidth = 31; BoardHeight = 31; } //sets the size of the custom mine count to the master size
                 else if (DifficultyDrop.SelectedIndex == 0) { BoardWidth = 9; BoardHeight = 9; MineNum = 10; } // Easy has mine density of 16%
                 else if (DifficultyDrop.SelectedIndex == 1) { BoardWidth = 15; BoardHeight = 15; MineNum = 40; } // Intermediate has mine density of 18%
                 else if (DifficultyDrop.SelectedIndex == 2) { BoardWidth = 22; BoardHeight = 22; MineNum = 105; } // Expert has mine density of 22%
                 else if (DifficultyDrop.SelectedIndex == 3) { BoardWidth = 30; BoardHeight = 30; MineNum = 220; } // Master has mine density of 25%
 
                 NewGame = false;
-                BoxWidth = pictureBox1.Width / BoardWidth; BoxHeight = pictureBox1.Height / BoardHeight;
-
-                GenerateBoard();
+                GenerateBoard(); //create the board in the 'board' array
             }
 
             int Border = 48; //border for the canvas
-            this.Size = new Size((BoxScale*BoardWidth)+Border, (BoxScale*BoardHeight)+Border+16);
+            this.Size = new Size((BoxScale*BoardWidth)+Border, (BoxScale*BoardHeight)+Border+16); //sets the size of the canvas so that it fits the board
             for (int x = 0; x <= BoardWidth; x++){
                 for (int y = 0; y <= BoardHeight; y++){
-                    e.Graphics.DrawRectangle(new Pen(Color.Black), BoxScale, BoxScale, x * BoxScale, y * BoxScale);
+                    e.Graphics.DrawRectangle(new Pen(Color.Black), BoxScale, BoxScale, x * BoxScale, y * BoxScale); //create the boxes
                 }
             }
         }
 
         void GenerateBoard()
         {
+            for (int iniX = 0; iniX < BoardWidth; iniX++) { for (int iniY = 0; iniY < BoardWidth; iniY++) { Board[iniX, iniY, 0] = '-';} }
+            //above inisialises the board so that later references don't bug out
+
             Board = new object[BoardWidth,BoardHeight,2];
             for (int b = 0; b < MineNum; b++)
             {
                 int RandIntX = Rand.Next(0, BoardWidth); int RandIntY = Rand.Next(0, BoardHeight);
-                if (Board[RandIntX, RandIntY, 0] == null) { Board[RandIntX, RandIntY, 0] = 'X'; }
-                else { b--; }
+                if (Board[RandIntX, RandIntY, 0] == null) { Board[RandIntX, RandIntY, 0] = 'X'; } //Places mines on the board
+                else { b--; } //if selected a current mine retry (might result in an infinate loop but odds are super low)
             }
 
-            for (int x = 0; x < BoardWidth; x++)
+            for (int x = 0; x <= BoardWidth; x++)
             {
-                for (int y = 0; y < BoardHeight; y++)
+                for (int y = 0; y <= BoardHeight; y++)
                 {
                     MineTotal = 0;
-                    try { if ((char)Board[x - 1, y - 1, 0] == 'X') { MineTotal++; } } catch { } //Cheking all cells around for any mines
-                    try { if ((char)Board[x - 1, y, 0] == 'X') { MineTotal++; } } catch { }     //Are trys as it can error on corners and it can just ignore those
-                    try { if ((char)Board[x - 1, y + 1, 0] == 'X') { MineTotal++; } } catch { }
-                    try { if ((char)Board[x, y - 1, 0] == 'X') { MineTotal++; } } catch { }
-                    try { if ((char)Board[x, y + 1, 0] == 'X') { MineTotal++; } } catch { }
-                    try { if ((char)Board[x + 1, y - 1, 0] == 'X') { MineTotal++; } } catch { }
-                    try { if ((char)Board[x + 1, y, 0] == 'X') { MineTotal++; } } catch { }
-                    try { if ((char)Board[x + 1, y + 1, 0] == 'X') { MineTotal++; } } catch { }
+                    if ((x > 0 && y > 0) && (char)Board[x - 1, y - 1, 0] == 'X') { MineTotal++; } //Cheking all cells around for any mines
+                    if ((x > 0) && (char)Board[x - 1, y, 0] == 'X') { MineTotal++; }
+                    if ((x > 0 && y < BoardHeight) && (char)Board[x - 1, y + 1, 0] == 'X') { MineTotal++; }
+                    if ((y > 0) && (char)Board[x, y - 1, 0] == 'X') { MineTotal++; }
+                    if ((y < BoardHeight) && (char)Board[x, y + 1, 0] == 'X') { MineTotal++; }
+                    if ((x < BoardHeight && y > 0) && (char)Board[x + 1, y - 1, 0] == 'X') { MineTotal++; }
+                    if ((x < BoardHeight) && (char)Board[x + 1, y, 0] == 'X') { MineTotal++; }
+                    if ((x < BoardHeight && y < BoardHeight) && (char)Board[x + 1, y + 1, 0] == 'X') { MineTotal++; }
 
                     Board[x, y, 0] = MineTotal; Board[x, y, 1] = false;
                 }
