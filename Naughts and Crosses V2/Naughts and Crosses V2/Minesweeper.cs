@@ -19,7 +19,7 @@ namespace Naughts_and_Crosses_V2
         int BoardHeight;
         int BoxScale = 24;
         bool NewGame = true;
-        Object[,,] Board;
+        Object[,,] Board = new Object[30, 30, 2];
         Random Rand = new Random();
         int MineTotal;
 
@@ -83,7 +83,7 @@ namespace Naughts_and_Crosses_V2
 
         void GenerateBoard()
         {
-            for (int iniX = 0; iniX < BoardWidth; iniX++) { for (int iniY = 0; iniY < BoardWidth; iniY++) { Board[iniX, iniY, 0] = '-';} }
+            for (int iniX = 0; iniX < (BoardWidth-1); iniX++) { for (int iniY = 0; iniY < (BoardWidth-1); iniY++) { Board[iniX, iniY, 0] = '-';} }
             //above inisialises the board so that later references don't bug out
 
             Board = new object[BoardWidth,BoardHeight,2];
@@ -99,13 +99,13 @@ namespace Naughts_and_Crosses_V2
                 for (int y = 0; y <= BoardHeight; y++)
                 {
                     MineTotal = 0;
-                    if ((x > 0 && y > 0) && (char)Board[x - 1, y - 1, 0] == 'X') { MineTotal++; } //Cheking all cells around for any mines
-                    if ((x > 0) && (char)Board[x - 1, y, 0] == 'X') { MineTotal++; }
-                    if ((x > 0 && y < BoardHeight) && (char)Board[x - 1, y + 1, 0] == 'X') { MineTotal++; }
-                    if ((y > 0) && (char)Board[x, y - 1, 0] == 'X') { MineTotal++; }
-                    if ((y < BoardHeight) && (char)Board[x, y + 1, 0] == 'X') { MineTotal++; }
-                    if ((x < BoardHeight && y > 0) && (char)Board[x + 1, y - 1, 0] == 'X') { MineTotal++; }
-                    if ((x < BoardHeight) && (char)Board[x + 1, y, 0] == 'X') { MineTotal++; }
+                    if ((x > 0 && y > 0)                     && (char)Board[x - 1, y - 1, 0] == 'X') { MineTotal++; } //Checking all cells around for any mines
+                    if ((x > 0)                              && (char)Board[x - 1, y, 0] == 'X')     { MineTotal++; }
+                    if ((x > 0 && y < BoardHeight)           && (char)Board[x - 1, y + 1, 0] == 'X') { MineTotal++; }
+                    if ((y > 0)                              && (char)Board[x, y - 1, 0] == 'X')     { MineTotal++; }
+                    if ((y < BoardHeight)                    && (char)Board[x, y + 1, 0] == 'X')     { MineTotal++; }
+                    if ((x < BoardHeight && y > 0)           && (char)Board[x + 1, y - 1, 0] == 'X') { MineTotal++; }
+                    if ((x < BoardHeight)                    && (char)Board[x + 1, y, 0] == 'X')     { MineTotal++; }
                     if ((x < BoardHeight && y < BoardHeight) && (char)Board[x + 1, y + 1, 0] == 'X') { MineTotal++; }
 
                     Board[x, y, 0] = MineTotal; Board[x, y, 1] = false;
